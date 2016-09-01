@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SymlinkCreator.GUI
 {
     partial class Form1
     {
@@ -40,8 +40,8 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.startButton = new System.Windows.Forms.Button();
             this.typeSelect = new System.Windows.Forms.ComboBox();
+            this.moveBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.nameField = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,30 +156,32 @@
             // 
             this.typeSelect.FormattingEnabled = true;
             this.typeSelect.Items.AddRange(new object[] {
-            "Folder",
-            "File"});
+            "File",
+            "Folder"});
             this.typeSelect.Location = new System.Drawing.Point(15, 12);
             this.typeSelect.Name = "typeSelect";
             this.typeSelect.Size = new System.Drawing.Size(487, 21);
             this.typeSelect.TabIndex = 12;
             this.typeSelect.SelectedIndexChanged += new System.EventHandler(this.typeSelect_SelectedIndexChanged);
             // 
+            // moveBox
+            // 
+            this.moveBox.AutoSize = true;
+            this.moveBox.Location = new System.Drawing.Point(250, 176);
+            this.moveBox.Name = "moveBox";
+            this.moveBox.Size = new System.Drawing.Size(15, 14);
+            this.moveBox.TabIndex = 14;
+            this.moveBox.UseVisualStyleBackColor = true;
+            this.moveBox.CheckedChanged += new System.EventHandler(this.moveBox_CheckedChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(142, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Symlink name:";
-            // 
-            // nameField
-            // 
-            this.nameField.Location = new System.Drawing.Point(222, 173);
-            this.nameField.Name = "nameField";
-            this.nameField.Size = new System.Drawing.Size(278, 20);
-            this.nameField.TabIndex = 14;
-            this.nameField.TextChanged += new System.EventHandler(this.nameField_TextChanged);
+            this.label2.Text = "Move to Destination:";
             // 
             // Form1
             // 
@@ -187,7 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 304);
-            this.Controls.Add(this.nameField);
+            this.Controls.Add(this.moveBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.typeSelect);
             this.Controls.Add(this.startButton);
@@ -196,7 +198,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Symlink Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -219,8 +221,8 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.ComboBox typeSelect;
+        private System.Windows.Forms.CheckBox moveBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox nameField;
     }
 }
 
