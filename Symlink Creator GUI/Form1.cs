@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SymlinkCreator;
-using System.IO;
 
 namespace SymlinkCreator.GUI
 {
@@ -113,6 +104,13 @@ namespace SymlinkCreator.GUI
             destinationField.ResetText();
             targetField.ResetText();
             startButton.Enabled = false;
+            if(linkType == LinkType.File)
+            {
+                retainExecutables.Enabled = false;
+            } else
+            {
+                retainExecutables.Enabled = true;
+            }
         }
 
         private void moveBox_CheckedChanged(object sender, EventArgs e)
@@ -124,6 +122,7 @@ namespace SymlinkCreator.GUI
             {
                 progressBar.Maximum = 2;
             }
+            progressBar.Value = 0;
         }
     }
 }

@@ -128,6 +128,9 @@
             // retainExecutables
             // 
             this.retainExecutables.AutoSize = true;
+            this.retainExecutables.Checked = true;
+            this.retainExecutables.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.retainExecutables.Enabled = false;
             this.retainExecutables.Location = new System.Drawing.Point(121, 176);
             this.retainExecutables.Name = "retainExecutables";
             this.retainExecutables.Size = new System.Drawing.Size(15, 14);

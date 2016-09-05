@@ -7,8 +7,8 @@
     <ProjectGuid>{4CEF5EAF-4FE4-4F2F-8DB9-C6403B0E9D66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Symlink_Creator</RootNamespace>
-    <AssemblyName>Symlink Creator</AssemblyName>
+    <RootNamespace>SymlinkCreator</RootNamespace>
+    <AssemblyName>Symlink</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
