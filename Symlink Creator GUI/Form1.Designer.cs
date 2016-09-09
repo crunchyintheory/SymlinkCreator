@@ -35,8 +35,6 @@
             this.destinationField = new System.Windows.Forms.TextBox();
             this.destinationLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.retainExecutables = new System.Windows.Forms.CheckBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.startButton = new System.Windows.Forms.Button();
             this.typeSelect = new System.Windows.Forms.ComboBox();
@@ -116,28 +114,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paths";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Include Executables:";
-            // 
-            // retainExecutables
-            // 
-            this.retainExecutables.AutoSize = true;
-            this.retainExecutables.Checked = true;
-            this.retainExecutables.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.retainExecutables.Enabled = false;
-            this.retainExecutables.Location = new System.Drawing.Point(121, 176);
-            this.retainExecutables.Name = "retainExecutables";
-            this.retainExecutables.Size = new System.Drawing.Size(15, 14);
-            this.retainExecutables.TabIndex = 8;
-            this.retainExecutables.UseVisualStyleBackColor = true;
-            this.retainExecutables.CheckedChanged += new System.EventHandler(this.retainExecutables_CheckedChanged);
-            // 
             // progressBar
             // 
             this.progressBar.Location = new System.Drawing.Point(15, 213);
@@ -170,7 +146,7 @@
             // moveBox
             // 
             this.moveBox.AutoSize = true;
-            this.moveBox.Location = new System.Drawing.Point(250, 176);
+            this.moveBox.Location = new System.Drawing.Point(120, 175);
             this.moveBox.Name = "moveBox";
             this.moveBox.Size = new System.Drawing.Size(15, 14);
             this.moveBox.TabIndex = 14;
@@ -180,7 +156,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 176);
+            this.label2.Location = new System.Drawing.Point(12, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 13;
@@ -197,8 +173,6 @@
             this.Controls.Add(this.typeSelect);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.retainExecutables);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Symlink Creator";
@@ -219,8 +193,6 @@
         private System.Windows.Forms.TextBox destinationField;
         private System.Windows.Forms.Label destinationLabel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox retainExecutables;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.ComboBox typeSelect;

@@ -46,10 +46,6 @@ namespace SymlinkCreator
                 return true;
             }
         }
-        public static bool createSymbolicLinkNoExecutables(string destinationPath, string targetPath)
-        {
-            return false;
-        }
         public static event EventHandler LinkStepCompleted = delegate {};
         public static void completeLinkStep(EventArgs e)
         {

@@ -6,7 +6,6 @@ namespace SymlinkCreator.GUI
     public partial class Form1 : Form
     {
         public bool moveToDest => moveBox.Checked;
-        public bool retainExecs => retainExecutables.Checked;
         public string targetPath => targetField.Text;
         public string destinationPath => destinationField.Text;
         public LinkType linkType => (LinkType)typeSelect.SelectedIndex;
@@ -104,13 +103,6 @@ namespace SymlinkCreator.GUI
             destinationField.ResetText();
             targetField.ResetText();
             startButton.Enabled = false;
-            if(linkType == LinkType.File)
-            {
-                retainExecutables.Enabled = false;
-            } else
-            {
-                retainExecutables.Enabled = true;
-            }
         }
 
         private void moveBox_CheckedChanged(object sender, EventArgs e)
