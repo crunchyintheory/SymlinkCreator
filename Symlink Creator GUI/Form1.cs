@@ -39,6 +39,10 @@ namespace SymlinkCreator.GUI
             } else
             {
                 OpenFileDialog dialog = new OpenFileDialog();
+                if (targetPath != "")
+                {
+                    dialog.InitialDirectory = System.IO.Path.GetDirectoryName(targetPath);
+                }
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     targetField.Text = dialog.FileName;
@@ -64,12 +68,20 @@ namespace SymlinkCreator.GUI
         {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.AddExtension = false;
-            if(linkType == LinkType.Directory)
+            if (targetPath != "")
+            {
+                dialog.FileName = System.IO.Path.GetFileName(targetPath);
+            }
+            if (linkType == LinkType.Directory)
             {
                 dialog.Filter = "Folder|*";
             } else
             {
                 dialog.Filter = "All files (*.*)|*.*";
+            }
+            if(destinationPath != "")
+            {
+                dialog.InitialDirectory = System.IO.Path.GetDirectoryName(destinationPath);
             }
             if (dialog.ShowDialog() == DialogResult.OK)
             {

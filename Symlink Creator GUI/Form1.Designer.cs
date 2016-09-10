@@ -164,6 +164,7 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.startButton;
             this.AccessibleName = "Symbolic Link Generator";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,7 +175,11 @@
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(534, 343);
+            this.MinimumSize = new System.Drawing.Size(534, 343);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Symlink Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
